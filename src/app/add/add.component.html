@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Contact</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="nom">nom:</label>
+      <input type="text" formControlName="nom" placeholder="Nom" class="form-control" id="nom">
+    </div>
+
+    <div class="form-group">
+      <label for="prenom">prénom:</label>
+      <input type="text" formControlName="prenom" placeholder="Prénom" class="form-control" id="prenom">
+    </div>
+
+    <div class="form-group">
+      <label for="dateNaissance">date:</label>
+      <input type="date" formControlName="dateNaissance" class="form-control" id="dateNaissance">
+    </div>
+
+    <div class="form-group">
+      <label for="photo">Photo:</label>
+      <input type="file" formControlName="photo" class="form-control" id="photo" (change)="selectFile($event)">
+    </div>
+
+    <button class="btn btn-success">Add contact</button>
+  </form>
+</div>

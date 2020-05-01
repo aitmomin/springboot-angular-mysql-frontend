@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <h2 class="text-center">Edit Contact</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nom">Nom:</label>
+      <input type="text" formControlName="nom" placeholder="Nom" name="nom" class="form-control" id="nom">
+    </div>
+
+    <div class="form-group">
+      <label for="prenom">Prénom:</label>
+      <input type="text" formControlName="prenom" placeholder="Prenom" name="prenom" class="form-control" id="prenom">
+    </div>
+
+    <div class="form-group">
+      <label for="dateNaissance">Date:</label>
+      <input type="date" formControlName="dateNaissance" name="dateNaissance" class="form-control" id="dateNaissance">
+    </div>
+
+    <!--<div class="form-group">
+      <label for="photo">Photo:</label>
+      <input type="file" formControlName="photo" name="photo" class="form-control" id="photo" (change)="selectFile($event)">
+    </div>-->
+
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>

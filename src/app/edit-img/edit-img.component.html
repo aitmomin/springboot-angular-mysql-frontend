@@ -1,0 +1,12 @@
+<div class="col-md-6">
+  <h2 class="text-center">Edit Img Contact</h2>
+  <form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+
+    <div class="form-group">
+      <label for="photo">Photo:</label>
+      <input type="file" class="form-control" (change)="selectFile($event)">
+    </div>
+
+    <button class="btn btn-success">Edit Img</button>
+  </form>
+</div>
